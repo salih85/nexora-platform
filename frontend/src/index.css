@@ -1,3 +1,53 @@
-/* Minimal global styles for scaffold */
-html,body,#root{height:100%;margin:0;font-family:Inter,Arial,Helvetica,sans-serif}
-body{background:#fff;color:#111}
+@import 'tailwindcss';
+
+:root {
+  font-family: Inter, 'Segoe UI', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #0f172a;
+  background-color: #f8fafc;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  background-color: #f8fafc;
+}
+
+html.dark {
+  background-color: #020817;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+  min-height: 100vh;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f8fafc 0%, #eff6ff 100%);
+  color: #0f172a;
+}
+
+html.dark body {
+  background: linear-gradient(180deg, #020817 0%, #0f172a 100%);
+  color: #e2e8f0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+}

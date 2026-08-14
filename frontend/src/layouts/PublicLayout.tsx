@@ -1,13 +1,11 @@
-import React from 'react'
-import { Outlet, Link } from 'react-router-dom'
+import { Outlet } from 'react-router-dom'
+import Header from '../components/common/Header'
 
 export default function PublicLayout() {
   return (
-    <div>
-      <header style={{padding:16, borderBottom:'1px solid #eee'}}>
-        <Link to="/">Nexora</Link> · <Link to="/login">Login</Link>
-      </header>
-      <main>
+    <div className="min-h-screen bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100">
+      <Header />
+      <main className="mx-auto max-w-7xl px-6 py-10">
         <Outlet />
       </main>
     </div>

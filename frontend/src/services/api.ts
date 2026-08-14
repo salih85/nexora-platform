@@ -1,5 +1,16 @@
-// minimal API client placeholder
-export async function fetchJSON(url: string) {
-  const res = await fetch(url)
-  return res.json()
+import axios from 'axios'
+
+export const api = axios.create({
+  baseURL: import.meta.env.VITE_API_BASE_URL ?? 'http://localhost:5000/api',
+  timeout: 10000,
+  headers: {
+    'Content-Type': 'application/json',
+  },
+})
+
+export default api
+
+export async function fetchJSON<T>(url: string): Promise<T> {
+  const { data } = await api.get<T>(url)
+  return data
 }
