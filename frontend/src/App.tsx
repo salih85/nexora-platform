@@ -1,10 +1,11 @@
 import { useEffect } from 'react'
 import { Provider, useSelector } from 'react-redux'
-import { Navigate, Route, Routes } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 import PublicLayout from './layouts/PublicLayout'
 import DashboardLayout from './layouts/DashboardLayout'
 import Login from './pages/auth/Login'
 import DashboardHome from './pages/dashboard/DashboardHome'
+import HomeLanding from './pages/HomeLanding'
 import { store, type RootState } from './store'
 
 function AppRoutes() {
@@ -19,7 +20,7 @@ function AppRoutes() {
   return (
     <Routes>
       <Route path="/" element={<PublicLayout />}>
-        <Route index element={<Navigate to="/login" replace />} />
+        <Route index element={<HomeLanding />} />
         <Route path="login" element={<Login />} />
       </Route>
 
