@@ -1,5 +1,4 @@
 import React from 'react'
-import Header from '../components/common/Header'
 import Hero from '../components/landing/Hero'
 import FeaturedCourses from '../components/landing/FeaturedCourses'
 import PopularCategories from '../components/landing/PopularCategories'
@@ -16,8 +15,7 @@ import FooterLanding from '../components/landing/FooterLanding'
 export default function HomeLanding() {
   return (
     <div className="min-h-screen bg-slate-50 dark:bg-slate-950">
-      <Header />
-
+      
       <main className="mx-auto max-w-6xl px-6">
         <Hero />
         <FeaturedCourses />
